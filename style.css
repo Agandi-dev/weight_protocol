@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    color: #333;
+}
+
+#title {
+    color: chocolate;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#weightForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.field label {
+    font-size: 14px;
+    color: #555;
+}
+
+#weightForm input[type="date"],
+#weightForm input[type="number"] {
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#weightForm input[type="submit"],
+#goalButton,
+#settingsButton {
+    padding: 9px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#weightForm input[type="submit"] {
+    background-color: chocolate;
+    border-color: chocolate;
+    color: white;
+}
+
+#weightForm input[type="submit"]:hover {
+    background-color: #b35a1f;
+}
+
+#goalButton:hover,
+#settingsButton:hover {
+    background-color: #e8e8e8;
+}
+
+.hidden {
+    display: none;
+}
+
+#graph {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    background-color: beige;
+    border-radius: 6px;
+}
+
+#monthNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#monthNav button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#monthNav button:hover {
+    background-color: #e8e8e8;
+}
+
+#monthLabel {
+    min-width: 140px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#monthStats {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+#monthStats.stats-loss {
+    color: green;
+}
+
+#monthStats.stats-gain {
+    color: red;
+}
+
+#entryPopup {
+    position: fixed;
+    z-index: 100;
+    min-width: 220px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+#entryPopup .field {
+    margin-bottom: 12px;
+}
+
+#entryPopup input[type="date"],
+#entryPopup input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#popupActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+#popupActions button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#popupActions button:hover {
+    background-color: #e8e8e8;
+}
+
+#popupActions button[type="submit"] {
+    background-color: chocolate;
+    border-color: chocolate;
+    color: white;
+}
+
+#popupActions button[type="submit"]:hover {
+    background-color: #b35a1f;
+}
+
+#popupDelete {
+    background-color: white;
+    border-color: #d9534f;
+    color: #d9534f;
+}
+
+#popupDelete:hover {
+    background-color: #fbeaea;
+}
+
+#settingsPanel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    min-width: 260px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+#settingsPanel h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+#settingsPanel .field {
+    margin-bottom: 12px;
+}
+
+#settingsPanel select,
+#settingsPanel input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#settingsActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+#settingsActions button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#settingsActions button:hover {
+    background-color: #e8e8e8;
+}
+
+#settingsClearButton {
+    background-color: white;
+    border-color: #d9534f;
+    color: #d9534f;
+}
+
+#settingsClearButton:hover {
+    background-color: #fbeaea;
+}
